@@ -45,14 +45,14 @@
      <tr>
         <td>001</td>
         <td>นุ้งเจมส์</td>
-        <td>ภชรพล-ลิมป์สุชาลี</td>
+        <td>ภชรพล ลิมป์สุชาลี</td>
         <td>jaramie123@gmail.com</td>
         <td>089-3488961</td>
         <td> <img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png" width="15px" height="15px" ></td>
       </tr> <tr>
         <td>002</td>
         <td>นุ้งโอ๊ค</td>
-        <td>พีรภัทร์-ลิ้มสร้อยเพ็ชร์</td>
+        <td>พีรภัทร์ ลิ้มสร้อยเพ็ชร์</td>
         <td>oakley789@gmail.com</td>
         <td>084-4488855</td>
         <td> <img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png" width="15px" height="15px" ></td>
@@ -66,7 +66,7 @@
       </tr> <tr>
         <td>004</td>
         <td>นุ้งบิววี่</td>
-        <td>ธวัฒณ์-เล้าอรุณ</td>
+        <td>ธวัฒณ์ เล้าอรุณ</td>
         <td>biwies456@gmail.com</td>
         <td>081-12123121</td>
         <td> <img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png" width="15px" height="15px" ></td>
