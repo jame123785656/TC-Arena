@@ -14,8 +14,4 @@ class UserModel extends Model
         $this->insert($data);
         return TRUE;
     }
-    public function login(){
-        
-    }
-
 }
