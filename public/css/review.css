@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  background-color: rgb(215, 237, 240);
+  height:65px;
+  
+}
+.nav-item .nav-link {
+ display: flex;
+ text-align: left;
+ width: 100%;
+}
+
+.nav-item a{
+ list-style: none;
+  margin-left: 25%;
+  font-size: 1rem;
+  margin-top: 3%;
+}
+.btn {
+  margin-right: 40px;
+  color: black;
+  width: 100px
+}
