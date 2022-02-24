@@ -3,117 +3,91 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('./css/employee.css'); ?>">
-
-  <title>TC Arena</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/employee.css'); ?>" >
+    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar.css'); ?>" >
+  <title>Empliyee</title>
 </head>
 
 
 <body>
   <?php require('component/navbar_admin.php') ?>
-
-  <img src="https://cdn.discordapp.com/attachments/934731258976677898/935544561093181500/add.png" width="35px" height="35px" align="right" onclick="openForm()" Open Form>
-  <center>
-    <h1>จัดการการจองสนาม</h1>
-  </center>
- 
- <?php if ($field) : ?>
-    <?php foreach ($field as $field) : ?>
-      <div class="card7">
-    
-        <h4><?php echo $field['Name']; ?></h4>
-        <img src="/img/<?php echo $field['f_image'] ?>" style="width:20%">
-        <div class="card-body">
-          <p class="card-text">
-         <?php echo $field['Price']; ?> บาท
-          </p>
-          <?php echo $field['person']; ?> คน<br>
-          <?php echo $field['Promotion']; ?>
-          <br>
-          <br>
-          <center>
-            <a href="#" class="btn-edit">แก้ไข</a>
-            <a href="#" class="btn-deleted">ลบ</a>
-          </center>
+  
+        <div class="text-section">
+          <p>จัดการจองสนาม</p>
+          <h4 onclick="openForm()"><i class="fas fa-plus"></i></h4>
         </div>
-      </div>
+        
+        <div class="box-card">
+          <div class="row">
 
+  <?php if ($field) : ?>
+    <?php foreach ($field as $field) : ?>
+            <div class="card">
+              <p class="title-section"><?php echo $field['Name']; ?></p>
+                  <div class="img-show">
+                      <img src="/img/<?php echo $field['f_image'] ?>">
+                  </div>
+                  <div class="text-show">
+                      <p>ขนาดสนาม นี่ใส่เผื่อไว้ถ้าไม่มีลบออก</p>
+                      <p>รองรับผู้เล่นได้มากสุด <?php echo $field['person']; ?> คน</p>
+                      <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
+                      <p>ฟรีน้ำเปล่าขนาด <?php echo $field['Promotion']; ?></p>
+                  </div>
+                  <div class="btn-show">
+                      <button type="button" class="btnEdit">แก้ไข</button>
+                      <button type="button" class="btndelete">ลบ</button>
+                  </div>
+            </div>
     <?php endforeach; ?>
   <?php endif; ?>
 
+          </div>
+       </div>
 
-  <!-- Popup -->
-  <div class="form-popup" id="myForm">
-    <form action="/indexemployee/insert" class="form-container" enctype="multipart/form-data">
-      <center>
-        <h1>เพิ่มข้อมูลสนาม</h1>
-      </center>
+    <!-- Popup -->
+    <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+            <div class="text-header">
+                <h3>เพิ่มข้อมูลสนาม</h3>
+                <img src="/img/<?php echo $field['f_image'] ?>">
+                <input type="file" name="image"  accept="img/*">
+            </div>
 
-      <br>
-      <center>
-        <h4 for="inputf_image">รูปภาพ</h4>
-
-
-        <input type="file" name="f_image" accept="img/*">
-      </center>
-
-      <label for="inputName"><b>ชื่อสนาม</b></label>
-      <input type="text" placeholder="กรุณาระบุชื่อสนาม" name="Name" id="inputforName" value="<?= set_value('Name'); ?>" required>
-
-      <label for="inputType"><b>เพิ่มขนาดสนาม</b></label>
-      <input type="text" placeholder="กรุณาระบุขนาดสนาม" name="Type" id="inputforType" value="<?= set_value('Type'); ?>" required>
-
-      <label for="inputperson"><b>เพิ่มจำนวนผู้เล่น</b></label>
-      <input type="text" placeholder="กรุณาระบุจำนวนผู้เล่นที่สนามรองรับ" name="person" id="inputforperson" value="<?= set_value('person'); ?>" required>
-
-      <label for="inputPrice"><b>เพิ่มค่าบริการ/ชม.</b></label>
-      <input type="text" placeholder="กรุณาระบุค่าบริการ" name="Price" id="inputforPrice" value="<?= set_value('Price'); ?>" required>
-
-      <label for="inputPromotion"><b>เพิ่มโปรโมชั่น</b>.</b></label>
-      <input type="text" placeholder="กรุณาระบุโปรโมชั่น" name="Promotion" id="inputforPromotion" value="<?= set_value('Promotion'); ?>" required>
+            <div class="form-field">
+                <p>เพิ่มชื่อสนาม</p>
+                <input type="text" placeholder="กรุณาใส่ชื่อสนาม">
+                <p>เพิ่มขนาดสนาม</p>
+                <input type="text" placeholder="กรุณาใส่ชื่อขนาดสนาม">
+                <p>เพิ่มจำนวนผู้เล่น</p>
+                <input type="text" placeholder="กรุณาใส่จำนวนผู้เล่น">
+                <p>เพิ่มค่าบริการ/ชม.</p>
+                <input type="" placeholder="กรุณาใส่ค่าบริการ/ชม.">
+                <p>เพิ่มโปรโมชั่น</p>
+                <input type="text" placeholder="กรุณาใส่โปรโมชั่น">
+            </div>
+            <div class="form-btn">
+                <button class="btnCf" type="submit">ยืนยัน</button>
+                <button class="btnCancel" type="submit">ยกเลิก</button>
+            </div>
+        </form>
+    </div>
 
 
-      <button type="submit" class="btn-1">ยืนยัน</button>
-      <button type="button" class="btn-2" onclick="closeForm()">ยกเลิก</button>
-    </form>
-  </div>
-
-  <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-  </script>
-
-  <script>
-    function triggerClick() {
-      document.querySelector('#profileimage').click();
-    }
-
-    function displayImage(e) {
-      if (e.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-          document.querySelector('#profileDisplay').setAttribute('src', e.target.result);
-        }
-        reader.readAsDataURL(e.files[0]);
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
       }
-    }
-  </script>
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+
+
 
 
 </body>
