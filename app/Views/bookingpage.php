@@ -8,7 +8,7 @@
   
   
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/bookingpage.css'); ?>" >
-    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbaruser.css'); ?>" >
+    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_admin.css'); ?>" >
     <title>จองสนาม</title>
 </head>
 <body>
