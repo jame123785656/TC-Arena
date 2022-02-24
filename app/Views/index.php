@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link href="./css/index.css" rel="stylesheet" />
   <link href="./css/navbar.css" rel="stylesheet" />
-  <title>TC Arena</title>
+  <title>TC Arenasss</title>
 </head>
 
 <body>
