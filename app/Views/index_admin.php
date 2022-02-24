@@ -32,7 +32,7 @@
                       <img src="/img/<?php echo $field['f_image'] ?>">
                   </div>
                   <div class="text-show">
-                      <p>ขนาดสนาม นี่ใส่เผื่อไว้ถ้าไม่มีลบออก</p>
+                      <p><?php echo $field['Type']; ?></p>
                       <p>รองรับผู้เล่นได้มากสุด <?php echo $field['person']; ?> คน</p>
                       <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
                       <p>ฟรีน้ำเปล่าขนาด <?php echo $field['Promotion']; ?></p>
