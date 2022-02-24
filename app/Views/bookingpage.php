@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  
-  
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/bookingpage.css'); ?>" >
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_admin.css'); ?>" >
     <title>จองสนาม</title>
@@ -38,7 +35,7 @@
                     <p>- ขนาด 22*42 เมตร</p>
                     <p>- รองรับผู้เล่นได้<?php echo $field['person']; ?> คน</p>
                     <p>- อัตราค่าบริการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
-                    <p>- <?php echo $field['Promotion']; ?></p>
+                    <p>- ฟรีน้ำเปล่าขนาด<?php echo $field['Promotion']; ?></p>
                     
                     <button type="button" class="btn-reserve" onclick="openForm()">จองสนาม</button>
     
