@@ -17,7 +17,7 @@
   <?php require('component/navbar_admin.php') ?>
   
         <div class="text-section">
-          <p>จัดการจองสนาม</p>
+          <p>จัดการสนาม</p>
           <h4 onclick="openForm()"><i class="fas fa-plus"></i></h4>
         </div>
         
@@ -38,7 +38,7 @@
                       <p>ฟรีน้ำเปล่าขนาด <?php echo $field['Promotion']; ?></p>
                   </div>
                   <div class="btn-show">
-                      <button type="button" class="btnEdit">แก้ไข</button>
+                      <button onclick="EditForm()" type="button" class="btnEdit" >แก้ไข</button>
                       <button type="button" class="btndelete">ลบ</button>
                   </div>
             </div>
@@ -60,14 +60,45 @@
             <div class="form-field">
                 <p>เพิ่มชื่อสนาม</p>
                 <input type="text" placeholder="กรุณาใส่ชื่อสนาม">
-                <p>เพิ่มขนาดสนาม</p>
-                <input type="text" placeholder="กรุณาใส่ชื่อขนาดสนาม">
+                <!-- <p>เพิ่มขนาดสนาม</p>
+                <input type="text" placeholder="กรุณาใส่ชื่อขนาดสนาม"> -->
                 <p>เพิ่มจำนวนผู้เล่น</p>
                 <input type="text" placeholder="กรุณาใส่จำนวนผู้เล่น">
                 <p>เพิ่มค่าบริการ/ชม.</p>
                 <input type="" placeholder="กรุณาใส่ค่าบริการ/ชม.">
                 <p>เพิ่มโปรโมชั่น</p>
                 <input type="text" placeholder="กรุณาใส่โปรโมชั่น">
+
+                
+            </div>
+            <div class="form-btn">
+                <button class="btnCf" type="submit">ยืนยัน</button>
+                <button class="btnCancel" type="submit">ยกเลิก</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Editform -->
+    
+    <div class="form-popup" id="EditForm">
+        <form action="" class="form-container">
+            <div class="text-header">
+                <h3>แก้ไขข้อมูลสนาม</h3>
+                <img src="/img/<?php echo $field['f_image'] ?>">
+                <input type="file" name="image"  accept="img/*">
+            </div>
+
+            <div class="form-field">
+                <p>เพิ่มชื่อสนาม</p>
+                <input type="text" placeholder="<?php echo $field['Name']; ?>">
+                <!-- <p>เพิ่มขนาดสนาม</p>
+                <input type="text" placeholder=""> -->
+                <p>เพิ่มจำนวนผู้เล่น</p>
+                <input type="text" placeholder="<?php echo $field['person']; ?>">
+                <p>เพิ่มค่าบริการ/ชม.</p>
+                <input type="" placeholder="<?php echo $field['Price']; ?>">
+                <p>เพิ่มโปรโมชั่น</p>
+                <input type="text" placeholder="<?php echo $field['Promotion']; ?>">         
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
@@ -85,6 +116,12 @@
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
       }
+
+      function EditForm() {
+        document.getElementById("EditForm").style.display = "block";
+      }
+
+ 
     </script>
 
 
