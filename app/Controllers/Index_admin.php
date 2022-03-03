@@ -15,16 +15,16 @@ class index_admin extends Controller{
     }
     public function insert(){
         $model = new FieldModel();
-        $file = $this->request->getFile('f_image');
-        $f_image = $file->getRandomName();
-        $file->move('../public/img', $f_image);
+        // $file = $this->request->getFile('f_image');
+        // $f_image = $file->getRandomName();
+        // $file->move('../public/img', $f_image);
         $data = [
             'Name' => $this->request->getVar('Name'),
             'Type' => $this->request->getVar('Type'),
             'person' => $this->request->getVar('person'),
             'Price' => $this->request->getVar('Price'),
             'Promotion' => $this->request->getVar('Promotion'),
-            'f_image' => $f_image,
+            // 'f_image' => $f_image,
         ];
         $model->insert($data);
         return redirect()->to('/index_admin');

@@ -58,10 +58,10 @@ class Register extends Controller
                 'status' => "member",
                 'image' => "sadsadsadsada.jpg"
             ];
-            if($data){
-            $insert = $model->register($data);
-            return redirect()->to('/login');
-            } 
+            if ($data) {
+                $insert = $model->register($data);
+                return redirect()->to('/login');
+            }
         } else {
             $data['validation'] = $this->validator;
             echo view('register', $data);

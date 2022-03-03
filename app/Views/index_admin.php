@@ -27,18 +27,18 @@
   <?php if ($field) : ?>
     <?php foreach ($field as $field) : ?>
             <div class="card">
-              <p class="title-section"><?php echo $field['Name']; ?></p>
+              <h3 class="title-section"><?php echo $field['Name']; ?></h3>
                   <div class="img-show">
                       <img src="/img/<?php echo $field['f_image'] ?>">
                   </div>
                   <div class="text-show">
-                      <p><?php echo $field['Type']; ?></p>
-                      <p>รองรับผู้เล่นได้มากสุด <?php echo $field['person']; ?> คน</p>
-                      <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
-                      <p>ฟรีน้ำเปล่าขนาด <?php echo $field['Promotion']; ?></p>
+                      <h3><?php echo $field['Type']; ?></h3>
+                      <p><?php echo $field['person']; ?> </p>
+                      <p><?php echo $field['Price']; ?></p>
+                      <p><?php echo $field['Promotion']; ?></p>
                   </div>
                   <div class="btn-show">
-                      <button onclick="EditForm()" type="button" class="btnEdit" >แก้ไข</button>
+                      <button onclick="EditForm()"  type="button" class="btnEdit" >แก้ไข</button>
                       <button type="button" class="btndelete">ลบ</button>
                   </div>
             </div>
@@ -50,26 +50,24 @@
 
     <!-- Popup -->
     <div class="form-popup" id="myForm">
-        <form action="" class="form-container">
+        <form action="Index_admin/insert" class="form-container">
             <div class="text-header">
                 <h3>เพิ่มข้อมูลสนาม</h3>
-                <img src="/img/<?php echo $field['f_image'] ?>">
-                <input type="file" name="image"  accept="img/*">
+                <!-- <img src="/img/<?php echo $field['f_image'] ?>">
+                <input type="file" name="image"  accept="img/*"> -->
             </div>
 
             <div class="form-field">
                 <p>เพิ่มชื่อสนาม</p>
-                <input type="text" placeholder="กรุณาใส่ชื่อสนาม">
-                <!-- <p>เพิ่มขนาดสนาม</p>
-                <input type="text" placeholder="กรุณาใส่ชื่อขนาดสนาม"> -->
+                <input type="text" name="Name" placeholder="กรุณาใส่ชื่อสนาม" value="<?= set_value('Name'); ?>">
+                <p>เพิ่มขนาดสนาม</p>
+                <input type="text" name="Type" placeholder="กรุณาใส่ชื่อขนาดสนาม" value="<?= set_value('Type'); ?>">
                 <p>เพิ่มจำนวนผู้เล่น</p>
-                <input type="text" placeholder="กรุณาใส่จำนวนผู้เล่น">
+                <input type="text" name="person" placeholder="กรุณาใส่จำนวนผู้เล่น" value="<?= set_value('person'); ?>">
                 <p>เพิ่มค่าบริการ/ชม.</p>
-                <input type="" placeholder="กรุณาใส่ค่าบริการ/ชม.">
+                <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." value="<?= set_value('Price'); ?>">
                 <p>เพิ่มโปรโมชั่น</p>
-                <input type="text" placeholder="กรุณาใส่โปรโมชั่น">
-
-                
+                <input type="text" name="Promotion" placeholder="กรุณาใส่โปรโมชั่น" value="<?= set_value('Promotion'); ?>">
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
@@ -81,7 +79,7 @@
     <!-- Editform -->
     
     <div class="form-popup" id="EditForm">
-        <form action="" class="form-container">
+        <form action="Index_admin/" class="form-container">
             <div class="text-header">
                 <h3>แก้ไขข้อมูลสนาม</h3>
                 <img src="/img/<?php echo $field['f_image'] ?>">
@@ -90,15 +88,15 @@
 
             <div class="form-field">
                 <p>เพิ่มชื่อสนาม</p>
-                <input type="text" placeholder="<?php echo $field['Name']; ?>">
-                <!-- <p>เพิ่มขนาดสนาม</p>
-                <input type="text" placeholder=""> -->
+                <input type="text" name="Name" placeholder="<?php echo $field['Name']; ?>" >
+                <p>เพิ่มขนาดสนาม</p>
+                <input type="text" name="Type"  placeholder="<?php echo $field['Type']; ?>">
                 <p>เพิ่มจำนวนผู้เล่น</p>
-                <input type="text" placeholder="<?php echo $field['person']; ?>">
+                <input type="text" name="person" placeholder="<?php echo $field['person']; ?>">
                 <p>เพิ่มค่าบริการ/ชม.</p>
-                <input type="" placeholder="<?php echo $field['Price']; ?>">
+                <input type="text"  name="Price" placeholder="<?php echo $field['Price']; ?>">
                 <p>เพิ่มโปรโมชั่น</p>
-                <input type="text" placeholder="<?php echo $field['Promotion']; ?>">         
+                <input type="text" name="Promotion" placeholder="<?php echo $field['Promotion']; ?>">         
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
