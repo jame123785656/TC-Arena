@@ -45,6 +45,8 @@ $routes->get('/index_admin', 'Index_admin::index_admin');
 $routes->get('/bookingpage', 'Bookingpage::bookingpage');
 $routes->get('/manageuser', 'Manageuser::manageuser');
 $routes->get('/pay', 'Pay::pay');
+$routes->get('/edit_admin/(:num)', 'Edit_admin::edit_admin/$1');
+
 
 
 

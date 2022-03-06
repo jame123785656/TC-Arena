@@ -27,9 +27,10 @@
   <?php if ($field) : ?>
     <?php foreach ($field as $field) : ?>
             <div class="card">
+            <input type="hidden" name="F_ID" value="<?php echo  $field['F_ID']; ?>">
               <h3 class="title-section"><?php echo $field['Name']; ?></h3>
                   <div class="img-show">
-                      <img src="/img/<?php echo $field['f_image'] ?>">
+                      <img src="/adminimage_stadium/<?php echo $field['f_image'] ?>">
                   </div>
                   <div class="text-show">
                       <h3><?php echo $field['Type']; ?></h3>
@@ -38,7 +39,7 @@
                       <p><?php echo $field['Promotion']; ?></p>
                   </div>
                   <div class="btn-show">
-                      <button onclick="EditForm()"  type="button" class="btnEdit" >แก้ไข</button>
+                  <a href="<?php echo base_url('/edit_admin/'.$field['F_ID']) ?>"><button type="button" class="btnEdit" >แก้ไข</button></a>
                       <button type="button" class="btndelete">ลบ</button>
                   </div>
             </div>
@@ -50,11 +51,10 @@
 
     <!-- Popup -->
     <div class="form-popup" id="myForm">
-        <form action="Index_admin/insert" class="form-container">
+    <form method="post" action="<?php echo base_url('Index_admin/insert');?>" enctype="multipart/form-data">
             <div class="text-header">
                 <h3>เพิ่มข้อมูลสนาม</h3>
-                <!-- <img src="/img/<?php echo $field['f_image'] ?>">
-                <input type="file" name="image"  accept="img/*"> -->
+                <input type="file" name="file" class="form-control">
             </div>
 
             <div class="form-field">
@@ -79,7 +79,8 @@
     <!-- Editform -->
     
     <div class="form-popup" id="EditForm">
-        <form action="Index_admin/" class="form-container">
+        <form action="<?= base_url('/Edit/edit') ?>" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="F_ID" value="<?php echo  $field['F_ID']; ?>">
             <div class="text-header">
                 <h3>แก้ไขข้อมูลสนาม</h3>
                 <img src="/img/<?php echo $field['f_image'] ?>">
@@ -100,16 +101,16 @@
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
-                <button class="btnCancel" type="submit">ยกเลิก</button>
+               <a href="/index_admin"><button class="btnCancel" type="button">ยกเลิก</button></a>
             </div>
         </form>
     </div>
 
 
     <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
+      // function openForm() {
+      //   document.getElementById("myForm").style.display = "block";
+      // }
 
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
