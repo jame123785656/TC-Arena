@@ -19,10 +19,9 @@
     
       <form action="Index_admin/" class="form-container-edit">
                 <h3>แก้ไขข้อมูลสนาม</h3>
-                <img src="/img/<?php echo $field['f_image'] ?>">
-                <input type="file" name="image"  accept="img/*">
-            </div>
-
+                <br>
+                <img src="/img/<?php echo $field['f_image'] ?>" width="200" height="200">
+                <input type="file" name="image"  accept="img/* " >
             <div class="form-field">
                 <p>เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" placeholder="<?php echo $field['Name']; ?>" >
@@ -37,7 +36,7 @@
             </div>
             <div class="form-btn-edit">
                 <button class="btnCf" type="submit" >ยืนยัน</button>
-                <button class="btnCancel" type="submit">ยกเลิก</button>
+                <a href="/index_admin"><button class="btnCancel" type="submit">ยกเลิก</button></a>
             </div>
 </form>
   

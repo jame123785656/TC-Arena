@@ -200,7 +200,7 @@ body{
   background-color: #146d0c;
 }
 
-a .btnCancel{
+.btnCancel{
   background-color: rgb(243, 9, 9);
   margin-left: 2%;
   transition: .4s;
@@ -210,16 +210,18 @@ a .btnCancel{
   background-color: rgb(196, 5, 5);
 }
 .form-btn-edit button{
-  width: 15%;
+  width: 20%;
   height: 30px;
   color: white;
   border-radius: 15px;
   border: 1px solid rgb(145, 145, 145);
   cursor: pointer;
-  margin-left: 22%;
+  margin-left: 20%;
   margin-top: 2%;
-  
-
-
+}
+.form-container-edit{
+  width: 40%;
+  margin-left: 30%;
+}
 
 

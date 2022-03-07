@@ -78,7 +78,7 @@
 
     <!-- Editform -->
     
-    <div class="form-popup" id="EditForm">
+    <!-- <div class="form-popup" id="EditForm">
         <form action="<?= base_url('/Edit/edit') ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="F_ID" value="<?php echo  $field['F_ID']; ?>">
             <div class="text-header">
@@ -104,7 +104,7 @@
                <a href="/index_admin"><button class="btnCancel" type="button">ยกเลิก</button></a>
             </div>
         </form>
-    </div>
+    </div> -->
 
 
     <script>
@@ -116,9 +116,9 @@
         document.getElementById("myForm").style.display = "none";
       }
 
-      function EditForm() {
-        document.getElementById("EditForm").style.display = "block";
-      }
+      // function EditForm() {
+      //   document.getElementById("EditForm").style.display = "block";
+      // }
 
  
     </script>
