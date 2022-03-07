@@ -35,12 +35,12 @@
                   <div class="text-show">
                       <h3><?php echo $field['Type']; ?></h3>
                       <p><?php echo $field['person']; ?> </p>
-                      <p><?php echo $field['Price']; ?></p>
+                      <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?>บาท</p>
                       <p><?php echo $field['Promotion']; ?></p>
                   </div>
                   <div class="btn-show">
                   <a href="<?php echo base_url('/edit_admin/'.$field['F_ID']) ?>"><button type="button" class="btnEdit" >แก้ไข</button></a>
-                      <button type="button" class="btndelete">ลบ</button>
+                     <a href="<?php echo base_url('/Index_admin/delete/'.$field['F_ID'])?>"> <button type="button" class="btndelete">ลบ</button></a>
                   </div>
             </div>
     <?php endforeach; ?>

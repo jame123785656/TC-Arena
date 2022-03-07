@@ -17,22 +17,23 @@
   <?php require('component/navbar_admin.php') ?>
   <div class="text-header">
     
-      <form action="Index_admin/" class="form-container-edit">
+  <form action="<?= base_url('/Index_admin/update') ?>" method="post" enctype="multipart/form-data" class="form-container-edit">
+        <input type="hidden" name="F_ID" value="<?php echo  $field['F_ID']; ?>">
                 <h3>แก้ไขข้อมูลสนาม</h3>
                 <br>
-                <img src="/img/<?php echo $field['f_image'] ?>" width="200" height="200">
-                <input type="file" name="image"  accept="img/* " >
+                <img src="/adminimage_stadium/<?php echo $field['f_image'] ?>">
+               <input type="file" name="f_image"  accept="adminimage_stadium/*">
             <div class="form-field">
-                <p>เพิ่มชื่อสนาม</p>
-                <input type="text" name="Name" placeholder="<?php echo $field['Name']; ?>" >
-                <p>เพิ่มขนาดสนาม</p>
-                <input type="text" name="Type"  placeholder="<?php echo $field['Type']; ?>">
-                <p>เพิ่มจำนวนผู้เล่น</p>
-                <input type="text" name="person" placeholder="<?php echo $field['person']; ?>">
-                <p>เพิ่มค่าบริการ/ชม.</p>
-                <input type="text"  name="Price" placeholder="<?php echo $field['Price']; ?>">
-                <p>เพิ่มโปรโมชั่น</p>
-                <input type="text" name="Promotion" placeholder="<?php echo $field['Promotion']; ?>">         
+                <p for="inputName">เพิ่มชื่อสนาม</p>
+                <input type="text" name="Name" id="inputforName" value="<?php echo $field['Name']; ?>" >
+                <p for="inputType">เพิ่มขนาดสนาม</p>
+                <input type="text" name="Type" id="inputforType"  value="<?php echo $field['Type']; ?>">
+                <p for="inputperson">เพิ่มจำนวนผู้เล่น</p>
+                <input type="text" name="person" id="inputforperson" value="<?php echo $field['person']; ?>">
+                <p for="inputPrice">เพิ่มค่าบริการ/ชม.</p>
+                <input type="text"  name="Price" id="inputforPrice" value="<?php echo $field['Price']; ?>">
+                <p for="inputPromotion">เพิ่มโปรโมชั่น</p>
+                <input type="text" name="Promotion" id="inputforPromotion" value="<?php echo $field['Promotion']; ?>">         
             </div>
             <div class="form-btn-edit">
                 <button class="btnCf" type="submit" >ยืนยัน</button>
