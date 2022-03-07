@@ -71,7 +71,7 @@
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
-                <button class="btnCancel" type="submit">ยกเลิก</button>
+                <button onclick="" class="btnCancel" type="submit">ยกเลิก</button>
             </div>
         </form>
     </div>
@@ -108,9 +108,9 @@
 
 
     <script>
-      // function openForm() {
-      //   document.getElementById("myForm").style.display = "block";
-      // }
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
 
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
