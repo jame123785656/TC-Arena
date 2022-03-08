@@ -17,6 +17,7 @@
 
 <body>
 <div class="navbar">
+  <h1>Oak</h1>
             <div class="logo">
                 <img src="/image/image1.png" alt="">
             </div>
