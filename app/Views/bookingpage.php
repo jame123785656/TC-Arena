@@ -32,10 +32,9 @@
                 </div>
                 <div class="detailsA">
                     <h2><?php echo $field['Name']; ?></h2><hr>
-                    <p>- ขนาด 22*42 เมตร</p>
-                    <p>- รองรับผู้เล่นได้<?php echo $field['person']; ?> คน</p>
-                    <p>- อัตราค่าบริการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
-                    <p>- ฟรีน้ำเปล่าขนาด <?php echo $field['Promotion']; ?></p>
+                    <p>- <?php echo $field['person']; ?> </p>
+                    <p>- <?php echo $field['Price']; ?> </p>
+                    <p>- <?php echo $field['Promotion']; ?></p>
                 
                     <button type="button" class="btn-reserve" onclick="openForm()">จองสนาม</button>
                 </div>
