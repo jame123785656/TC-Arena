@@ -37,7 +37,7 @@
             </div>
             <div class="form-btn-edit">
                 <button class="btnCf" type="submit" >ยืนยัน</button>
-                <a href="/index_admin"><button class="btnCancel" type="submit">ยกเลิก</button></a>
+                <a href="/index_admin"><button class="btnCancel" type="button">ยกเลิก</button></a>
             </div>
 </form>
   

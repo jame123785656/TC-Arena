@@ -17,6 +17,7 @@
 
 <body>
 <div class="navbar">
+ 
             <div class="logo">
                 <img src="/image/image1.png" alt="">
             </div>
