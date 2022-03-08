@@ -22,18 +22,18 @@
             <p><?php echo $field['Type']?></p>
             <div class="card">
                 <div class="show-imgA">
-                    <img src="/img/<?php echo $field['f_image'] ?>">
+                    <img src="/adminimage_stadium/<?php echo $field['f_image'] ?>">
                         <div class="img-smallA">
-                            <img src="/img/<?php echo $field['f_image'] ?> ">
-                            <img src="/img/<?php echo $field['f_image'] ?> ">
-                            <img src="/img/<?php echo $field['f_image'] ?> ">
-                            <img src="/img/<?php echo $field['f_image'] ?> ">
+                            <img src="/adminimage_stadium/<?php echo $field['f_image'] ?> ">
+                            <img src="/adminimage_stadium/<?php echo $field['f_image'] ?> ">
+                            <img src="/adminimage_stadium/<?php echo $field['f_image'] ?> ">
+                            <img src="/adminimage_stadium/<?php echo $field['f_image'] ?> ">
                         </div>
                 </div>
                 <div class="detailsA">
                     <h2><?php echo $field['Name']; ?></h2><hr>
                     <p>- <?php echo $field['person']; ?> </p>
-                    <p>- <?php echo $field['Price']; ?> </p>
+                    <p>- อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท </p>
                     <p>- <?php echo $field['Promotion']; ?></p>
                 
                     <button type="button" class="btn-reserve" onclick="openForm()">จองสนาม</button>
