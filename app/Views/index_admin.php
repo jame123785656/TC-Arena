@@ -71,7 +71,7 @@
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
-                <a href="/index_admin"><button onclick="" class="btnCancel" type="button">ยกเลิก</button></a>
+               <button onclick="closeForm()" class="btnCancel" type="button">ยกเลิก</button>
             </div>
         </form>
     </div>
