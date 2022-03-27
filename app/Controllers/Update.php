@@ -23,8 +23,12 @@ class Update extends Controller
         $session = session();
         $ID = $this->request->getVar('id');
         $file = $this->request->getFile('image');
+        if($_FILES['image']['name'] !=""){
         $image = $file->getRandomName();
         $file->move('../public/img', $image);
+        }else{
+            $image = $this->request->getVar('old_image');;
+        }
         $data = [
             'name' => $this->request->getVar('name'),
             'username' => $this->request->getVar('username'),

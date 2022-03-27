@@ -33,10 +33,10 @@
                       <img src="/adminimage_stadium/<?php echo $field['f_image'] ?>">
                   </div>
                   <div class="text-show">
-                      <h3><?php echo $field['Type']; ?></h3>
-                      <p><?php echo $field['person']; ?> </p>
-                      <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?>บาท</p>
-                      <p><?php echo $field['Promotion']; ?></p>
+                      <h3><?php echo $field['T_name']; ?></h3>
+                      <p>รองรับผู้เล่นได้มากสุด <?php echo $field['person']; ?> คน</p>
+                      <p>อัตราค่าบริกการ ชั่วโมงละ <?php echo $field['Price']; ?> บาท</p>
+                      <p><?php echo $field['p_name']; ?></p>
                   </div>
                   <div class="btn-show">
                   <a href="<?php echo base_url('/edit_admin/'.$field['F_ID']) ?>"><button type="button" class="btnEdit" >แก้ไข</button></a>
@@ -45,7 +45,8 @@
             </div>
     <?php endforeach; ?>
   <?php endif; ?>
-
+  
+    
           </div>
        </div>
 
@@ -61,13 +62,18 @@
                 <p>เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" placeholder="กรุณาใส่ชื่อสนาม" value="<?= set_value('Name'); ?>">
                 <p>เพิ่มขนาดสนาม</p>
-                <input type="text" name="Type" placeholder="กรุณาใส่ชื่อขนาดสนาม" value="<?= set_value('Type'); ?>">
+                <select name="Type" id="Type">
+                 <option value="1">สนามเล็ก</option>
+                 <option value="2">สนามใหญ่</option>
+                </select> 
                 <p>เพิ่มจำนวนผู้เล่น</p>
                 <input type="text" name="person" placeholder="กรุณาใส่จำนวนผู้เล่น" value="<?= set_value('person'); ?>">
                 <p>เพิ่มค่าบริการ/ชม.</p>
                 <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." value="<?= set_value('Price'); ?>">
                 <p>เพิ่มโปรโมชั่น</p>
-                <input type="text" name="Promotion" placeholder="กรุณาใส่โปรโมชั่น" value="<?= set_value('Promotion'); ?>">
+                <select name="Promotion" id="Promotion">
+                 <option value="1">	ฟรีน้ำเปล่าขนาด 500 ml. 1 แพ็ค</option>
+                </select> 
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>

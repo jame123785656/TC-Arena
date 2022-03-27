@@ -1,4 +1,5 @@
-<?php $session = session(); ?>
+<?php
+ $session = session(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,25 +24,33 @@
                 <br>
                 <img src="/adminimage_stadium/<?php echo $field['f_image'] ?>">
                <input type="file" name="f_image"  accept="adminimage_stadium/*">
+               <input type="hidden" name="old_image" value="<?php echo $field['f_image'] ?>">
             <div class="form-field">
                 <p for="inputName">เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" id="inputforName" value="<?php echo $field['Name']; ?>" >
                 <p for="inputType">เพิ่มขนาดสนาม</p>
-                <input type="text" name="Type" id="inputforType"  value="<?php echo $field['Type']; ?>">
+             <select name="Type" id="Type">
+             <?php if ($type) : ?>
+                      <?php foreach ($type as $type) : ?>
+                  <option value="<?php echo $type['T_id'] ?>" <?php if($field['Type']==$type['T_id']){
+                    echo 'selected';
+                  } ?>><?php echo $type['T_name']; ?></option>
+               
+                  <?php endforeach; ?>
+                    <?php endif; ?>
+                </select>
                 <p for="inputperson">เพิ่มจำนวนผู้เล่น</p>
                 <input type="text" name="person" id="inputforperson" value="<?php echo $field['person']; ?>">
                 <p for="inputPrice">เพิ่มค่าบริการ/ชม.</p>
                 <input type="text"  name="Price" id="inputforPrice" value="<?php echo $field['Price']; ?>">
                 <p for="inputPromotion">เพิ่มโปรโมชั่น</p>
-                <input type="text" name="Promotion" id="inputforPromotion" value="<?php echo $field['Promotion']; ?>">         
+                <input type="text" name="Promotion" id="inputforPromotion" value="<?php echo $field['p_name']; ?>">         
             </div>
             <div class="form-btn-edit">
                 <button class="btnCf" type="submit" >ยืนยัน</button>
                 <a href="/index_admin"><button class="btnCancel" type="button">ยกเลิก</button></a>
             </div>
 </form>
-  
-
 
 
 
