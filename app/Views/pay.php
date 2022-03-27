@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/pay.css'); ?>" >
-    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_Admin.css'); ?>" >
+    <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_user.css'); ?>" >
     <title>Pay</title>
 </head>
 <body>
 
-    <?php require('component/navbar.php') ?>
+    <?php require('component/navbar_user.php') ?>
 
         <div class="from-pay">
             <h4>ชำระเงิน</h4>
