@@ -6,18 +6,17 @@ use CodeIgniter\Controller;
 use App\Models\UserModel;
 
 
-class Update extends Controller
+class Editprofile extends Controller
 {
     public function index($ID = null)
     {
         $UserModel = new UserModel;
         $session = session();
         $data['user'] = $UserModel->where('ID',$ID)->first();
-        echo view('update', $data);
+        echo view('editprofile', $data);
     }
 
-    
-    public function update()
+    public function editprofile()
     {
         $model = new UserModel();
         $session = session();

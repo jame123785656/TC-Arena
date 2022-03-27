@@ -31,7 +31,7 @@ body{
 }
 
 .tableName input{
-    width: 75%;
+    width: 90%;
     height: 30px;
     border: 1.5px solid rgb(81, 87, 81);
     border-radius: 15px;
@@ -53,7 +53,7 @@ body{
     border-radius: 15px;
     padding-left: 10px;
     font-size: 15px;
-    margin-top: 37%;
+    margin-top: 27%;
     color: white;
     background-color: #517072;
     transition: .4s;
@@ -81,7 +81,7 @@ body{
 .btnback{
     width: 85%;
     height: 6%;
-    margin-top: 37.5%;
+    margin-top: 35%;
     margin-left: 7%;
     border: 1.5px solid rgb(102, 110, 102);
     border-radius: 15px;
@@ -106,4 +106,80 @@ body{
     margin-left: 10%;
     margin-top: 33%;
     border-radius: 160px;
+}
+
+@media screen and (max-width: 360px){
+    body{
+        background-image: linear-gradient(45deg, #ffffff, #ffffff);  
+      }
+
+    .areaBox{         
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2.5%;
+        margin-bottom: 2%;
+        display: block;
+    }
+
+    .boxLeft{
+        width: 80%;
+        height: 520px;
+        margin-top: 0%;
+    }
+
+    .profileText{
+        margin-bottom: 80%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .tableName h4{
+        font-size: 16px;
+        margin-left: 3%;
+    }
+
+    .tableName p{
+        font-size: 16px;
+        margin-left: 5%;
+    }
+
+    .tableName input{
+        width: 100%;
+        margin-left: 1%;
+        color: #8d8f8f;
+    }
+
+    .boxRight{
+        margin-left: 0%;
+        margin-top: -150%;
+        width: 100%;
+        height: 150px;
+    }
+
+    .boxRight img{
+        width: 130px;
+        margin-left: 30%;
+        margin-top: 5%;
+        border: 1px solid silver;
+    }
+
+    .boxRight input{
+        margin-left: 22%;
+        margin-top: 1%;
+    }
+
+    .btnprofile{
+        width: 100%;
+        height: 35px;
+        margin-top: 10%;
+        font-size: 15px;
+    }
+
+    .btnback{
+        width: 80%;
+        height: 35px;
+        margin-top: 133%;
+        font-size: 15px;
+        margin-left: 14%;
+    }
 }
