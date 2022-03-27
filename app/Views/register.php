@@ -12,14 +12,11 @@
 </head>
 <body>
 
-<?php if (isset($validation)) : ?>
-        <div class="alert alert-danger"><?= $validation->listErrors(); ?></div>
-    <?php endif; ?>
+
     <form action="/register/save" id method="post">
         <div class="areaBackground">
             <div class="areaBox">
                 <div class="boxLeft">
-                    
                     <h2 class="registerText">สมัครสมาชิก</h2>
                     <div class="tableName">
                         <p for="inputname">ชื่อ-นามสกุล*</p>
@@ -39,11 +36,18 @@
 
                 </div>
                 <div class="boxRight">
-                    <img src="/image/image1.png" alt="">
-                    <a href="/login"><button type="button" class="btnback">ย้อนกลับ</button></a>
+                    <div class="rightStart">
+                        <?php if (isset($validation)) : ?>
+                            <div class="alert alert-danger"><?= $validation->listErrors(); ?></div>
+                        <?php endif; ?>
+                    </div>
+                    <div class="rightEnd">
+                        <img src="/image/image1.png" alt="">
+                        <a href="/login"><button type="button" class="btnback">ย้อนกลับ</button></a>
+                    </div>
     </form>
-    </div>
-    </div>
-    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

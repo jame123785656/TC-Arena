@@ -1,0 +1,26 @@
+CRITICAL - 2022-03-27 02:04:35 --> require(component/navbar.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Views\user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(compone...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Views\user.php(20): require()
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Common.php(1089): CodeIgniter\View\View->render('user', Array, true)
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\User.php(7): view('user')
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\user->User()
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user))
+#8 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-03-27 02:05:26 --> require(component/navbar.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Views\bookingpage.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(compone...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Views\bookingpage.php(16): require()
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Common.php(1089): CodeIgniter\View\View->render('bookingpage', Array, true)
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\Bookingpage.php(12): view('bookingpage', Array)
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Bookingpage->bookingpage()
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bookingpage))
+#8 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

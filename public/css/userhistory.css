@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+
+.box-table{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.box-table h1{
+  text-align: center;
+}
+
+.items-table{
+  width: 100%;
+}
+
+.items-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.items-table td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+  }
+  
+.items-table tr:nth-child(even) {
+    background-color: rgb(224, 222, 222);
+  }

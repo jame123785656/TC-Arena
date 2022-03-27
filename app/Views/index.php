@@ -10,29 +10,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link href="./css/index.css" rel="stylesheet" />
-  <link href="./css/navbar.css" rel="stylesheet" />
+  <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/index.css'); ?>" >
+  <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar.css'); ?>" >
   <title>TC Aren</title>
 </head>
-
 <body>
-<div class="navbar">
- 
-            <div class="logo">
-                <img src="/image/image1.png" alt="">
-            </div>
-            <div class="menu-section">
-                <a href="/user"><p>หน้าหลัก</p></a>
-                <a href="/login"><p>จองสนาม</p></a>
-                <a href="/viewuser"><p>รีวิวสนาม</p></a>
-                <a href=""><p>ประวัติการจอง</p></a>
-                <a href=""><p>ติดต่อเรา</p></a>
-            </div>
-            <div class="showuser">
-                <a href="/login" class="logout"><p>เข้าสู่ระบบ</p></a>
-            </div>
-        </div>
-    <!-- End navbar      -->
+
+  <?php require('component/navbar.php') ?>
 
   <div>
     <center><img src="https://media.discordapp.net/attachments/922495064477925456/934487246780923954/background.jpg" style="width:100%" alt=""></center>

@@ -39,13 +39,15 @@ $routes->get('/user', 'User::user');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/stadium', 'Stadium::stadium');
 $routes->get('/profile', 'Profile::profile');
-$routes->get('/update/(:num)', 'Update::index/$1');
+$routes->get('/editprofile/(:num)', 'Editprofile::index/$1');
 $routes->get('/viewuser', 'Viewuser::viewuser');
 $routes->get('/index_admin', 'Index_admin::index_admin');
 $routes->get('/bookingpage', 'Bookingpage::bookingpage');
 $routes->get('/manageuser', 'Manageuser::manageuser');
 $routes->get('/pay', 'Pay::pay');
 $routes->get('/edit_admin/(:num)', 'Index_admin::edit_admin/$1');
+$routes->get('/userhistory', 'Userhistory::userhistory');
+$routes->get('/pay_admin', 'Pay_admin::pay_admin');
 
 
 

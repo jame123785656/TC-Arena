@@ -1,0 +1,55 @@
+CRITICAL - 2022-03-25 10:57:57 --> Invalid file: viewuser.php
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewuser.php')
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Common.php(1089): CodeIgniter\View\View->render('viewuser', Array, true)
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\Viewuser.php(11): view('viewuser')
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Viewuser->viewuser()
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viewuser))
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-25 12:39:59 --> Call to undefined function set_value()
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Common.php(1089): CodeIgniter\View\View->render('viewuser', Array, true)
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\Viewuser.php(11): view('viewuser')
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Viewuser->viewuser()
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viewuser))
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-25 12:39:59 --> Call to undefined function set_value()
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Common.php(1089): CodeIgniter\View\View->render('viewuser', Array, true)
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\Viewuser.php(11): view('viewuser')
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Viewuser->viewuser()
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viewuser))
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-25 12:47:03 --> Call to a member function move() on null
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\index_admin->insert()
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\index_admin))
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-03-25 13:39:41 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-25 13:39:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC_Arena\TC-Arena\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\TC_Arena\TC-Arena\app\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\TC_Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC_Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC_Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
