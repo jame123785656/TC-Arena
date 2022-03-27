@@ -146,8 +146,8 @@
 
                 <div class="boxRight">
                     <img src="/img/<?php echo $session->get('image') ?>" alt="">
-                    
                     <input type="file" name="image"  accept="img/*">
+                    <input type="hidden" name="old_image" value="<?php echo  $session->get('image') ?>">
                     <a href="/profile"><button type="button" class="btnback">ย้อนกลับ</button></a>
 
     </form>
