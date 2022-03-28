@@ -40,6 +40,7 @@ class index_admin extends Controller{
     }
     public function update()
     {
+        $session = session();
         $model = new FieldModel();
         $F_ID = $this->request->getVar('F_ID');
         $file = $this->request->getFile('f_image');
@@ -58,6 +59,10 @@ class index_admin extends Controller{
             'p_name' => $this->request->getVar('Promotion'),
             'f_image' => $f_image,
         ];
+        $session->setFlashdata('swel_title', 'แก้ไขข้อมูลสำเร็จ');
+        // $session->setFlashdata('swel_text', 'โปรดเข้าสู่ระบบก่อนทำรายการ');
+        $session->setFlashdata('swel_icon', 'success');
+        $session->setFlashdata('swel_button', 'ตกลง');
         $model->update($F_ID, $data);
 
         return redirect()->to('/index_admin');
@@ -65,8 +70,13 @@ class index_admin extends Controller{
     }
     
     public function delete($F_ID = null) {
+        $session = session();
         $FieldModel = new FieldModel();
         $data['group_project'] = $FieldModel->where('F_ID', $F_ID)->delete($F_ID);
+        $session->setFlashdata('swel_title', 'ลบข้อมูลสำเร็จ');
+        // $session->setFlashdata('swel_text', 'โปรดเข้าสู่ระบบก่อนทำรายการ');
+        $session->setFlashdata('swel_icon', 'success');
+        $session->setFlashdata('swel_button', 'ตกลง');
         return $this->response->redirect(site_url('/index_admin'));
     }
 }

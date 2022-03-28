@@ -1,3 +1,4 @@
+<?php $session = session(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,24 +26,39 @@
             <button type="button" onclick="openForm()">เขียนรีวิว</button>
         </div>
     </div>
-    
+    <?php if ($review) : ?>
+        <?php foreach ($review as $review) : ?>
     <div class="box-text">
+    
         <div class="section-left">
-            <p>ตู่เอง</p>
+            <p><?php echo $review['username']; ?></p>
         </div>
         <div class="section-right">
-            <h5>ประยุทธ์ จันทร์โอชา</h5>
-            <p>ผมเตะแล้วสดุดหญ้าล้มครับ นักเตะฟ้าประทาน</p>
+            <h5><?php echo $review['name']; ?></h5>
+            
+            <?php if(!$review['r_image']){
+               echo '';
+            }else{      
+            echo "<img src='/adminimage_stadium/".$review['r_image']."'>";
+            }
+      ?>     
+
+     
+            <p><?php echo $review['r_name']; ?></p>
         </div>
     </div>
-
+    <?php endforeach; ?>
+        <?php endif; ?>
+    
      <!-- Popup -->
      <div class="form-popup" id="myForm">
-    <form method="post" action="<?php echo base_url('Index_admin/insert');?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo base_url('user_review/insert');?>" enctype="multipart/form-data">
+    <input type="hidden" name="ID"  disabled class="form-control" id="inputforID"  value="<?php echo  $session->get('ID'); ?>">
 
             <div class="form-field">
                 <p>เขียนข้อความรีวิว</p>
-                <input type="text" name="Name" placeholder="กรุณาเขียนข้อความ">
+                <input type="file" name="r_image" class="form-control">
+                <input type="text" name="r_name"  id="inputforr_name" placeholder="กรุณาเขียนข้อความ" value="<?= set_value('r_name'); ?>">
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>
