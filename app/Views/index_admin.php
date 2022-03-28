@@ -59,21 +59,21 @@
     <form method="post" action="<?php echo base_url('Index_admin/insert');?>" enctype="multipart/form-data">
             <div class="text-header">
                 <h3>เพิ่มข้อมูลสนาม</h3>
-                <input type="file" name="file" class="form-control">
+                <input type="file" name="file" class="form-control" required>
             </div>
 
             <div class="form-field">
                 <p>เพิ่มชื่อสนาม</p>
-                <input type="text" name="Name" placeholder="กรุณาใส่ชื่อสนาม" value="<?= set_value('Name'); ?>">
+                <input type="text" name="Name" placeholder="กรุณาใส่ชื่อสนาม" required value="<?= set_value('Name'); ?>">
                 <p>เพิ่มขนาดสนาม</p>
                 <select name="Type" id="Type">
                  <option value="1">สนามเล็ก</option>
                  <option value="2">สนามใหญ่</option>
                 </select> 
                 <p>เพิ่มจำนวนผู้เล่น</p>
-                <input type="text" name="person" placeholder="กรุณาใส่จำนวนผู้เล่น" value="<?= set_value('person'); ?>">
+                <input type="text" name="person" placeholder="กรุณาใส่จำนวนผู้เล่น" required value="<?= set_value('person'); ?>">
                 <p>เพิ่มค่าบริการ/ชม.</p>
-                <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." value="<?= set_value('Price'); ?>">
+                <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." required value="<?= set_value('Price'); ?>">
                 <p>เพิ่มโปรโมชั่น</p>
                 <select name="Promotion" id="Promotion">
                  <option value="1">	ฟรีน้ำเปล่าขนาด 500 ml. 1 แพ็ค</option>
