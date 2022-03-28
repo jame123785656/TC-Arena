@@ -18,13 +18,9 @@
         </div>
         <div class="menu-section">
             <a href="/report_admin">
-                <p>Dashboard</p>
+                <p>สรุปยอด</p>
             </a>
-            <a href="/bookingpage_admin">
-                <p>จัดการการจองสนาม</p>
-            </a>
-
-            <a href="index_admin">
+            <a href="/index_admin">
                 <p>จัดการสนาม</p>
             </a>
             <a href="/promotion_admin">

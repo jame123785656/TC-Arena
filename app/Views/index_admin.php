@@ -66,7 +66,7 @@
                 <p>เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" placeholder="กรุณาใส่ชื่อสนาม" required value="<?= set_value('Name'); ?>">
                 <p>เพิ่มขนาดสนาม</p>
-                <select name="Type" id="Type">
+                <select name="Type" id="Type" class="type">
                  <option value="1">สนามเล็ก</option>
                  <option value="2">สนามใหญ่</option>
                 </select> 
@@ -75,7 +75,7 @@
                 <p>เพิ่มค่าบริการ/ชม.</p>
                 <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." required value="<?= set_value('Price'); ?>">
                 <p>เพิ่มโปรโมชั่น</p>
-                <select name="Promotion" id="Promotion">
+                <select name="Promotion" id="Promotion" class="type">
                  <option value="1">	ฟรีน้ำเปล่าขนาด 500 ml. 1 แพ็ค</option>
                 </select> 
             </div>

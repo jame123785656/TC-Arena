@@ -33,7 +33,7 @@
                 <p for="inputName">เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" id="inputforName" value="<?php echo $field['Name']; ?>" >
                 <p for="inputType">เพิ่มขนาดสนาม</p>
-             <select name="Type" id="Type">
+             <select name="Type" id="Type" class="type">
              <?php if ($type) : ?>
                       <?php foreach ($type as $type) : ?>
                   <option value="<?php echo $type['T_id'] ?>" <?php if($field['Type']==$type['T_id']){
