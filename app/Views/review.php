@@ -16,15 +16,27 @@
 
     <h3>รีวิวสนาม</h3>
         
-        <div class="box-text">
-            <div class="section-left">
-                <p>ตู่เอง</p>
-            </div>
-            <div class="section-right">
-                <h5>ประยุทธ์ จันทร์โอชา</h5>
-                <p>ผมเตะแล้วสดุดหญ้าล้มครับ นักเตะฟ้าประทาน</p>
-            </div>
+    <?php if ($review) : ?>
+        <?php foreach ($review as $review) : ?>
+    <div class="box-text">
+    
+        <div class="section-left">
+            <p><?php echo $review['username']; ?></p>
         </div>
+        <div class="section-right">
+            <h5><?php echo $review['name']; ?></h5>
+            
+            <?php if(!$review['r_image']){
+               echo '';
+            }else{      
+            echo "<img src='/adminimage_stadium/".$review['r_image']."'>";
+            }
+      ?>     
+            <p><?php echo $review['r_name']; ?></p>
+        </div>
+    </div>
+    <?php endforeach; ?>
+        <?php endif; ?>
     
     
 
