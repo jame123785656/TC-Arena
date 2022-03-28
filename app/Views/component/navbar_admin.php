@@ -17,20 +17,24 @@
             <img src="/image/image1.png" alt="">
         </div>
         <div class="menu-section">
-            <a href="/index_admin">
-                <p>หน้าหลัก</p>
+            <a href="/report_admin">
+                <p>Dashboard</p>
             </a>
-            <a href="">
+            <a href="/bookingpage_admin">
+                <p>จัดการการจองสนาม</p>
+            </a>
+
+            <a href="index_admin">
                 <p>จัดการสนาม</p>
             </a>
-            <a href="">
-                <p>จัดการการจองสนาม</p>
+            <a href="/promotion_admin">
+                <p>จัดการโปรโมชั่น</p>
+            </a>
+            <a href="/pay_admin">
+                <p>จัดการการชำระเงิน</p>
             </a>
             <a href="/manageuser">
                 <p>จัดการข้อมูลลูกค้า</p>
-            </a>
-            <a href="">
-                <p>จัดการการชำระเงิน</p>
             </a>
         </div>
         <div class="showuser">
