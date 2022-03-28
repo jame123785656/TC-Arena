@@ -298,3 +298,63 @@ CRITICAL - 2022-03-28 08:52:38 --> The original file is not a valid file.
 #5 C:\xampp1\htdocs\TC_Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 C:\xampp1\htdocs\TC_Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp1\\htdoc...')
 #7 {main}
+ERROR - 2022-03-28 10:02:32 --> Table 'tc_arena.type' doesn't exist
+CRITICAL - 2022-03-28 10:02:32 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\Index_admin.php(15): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\index_admin->Index_admin()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\index_admin))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
+ERROR - 2022-03-28 10:03:10 --> Table 'tc_arena.type' doesn't exist
+CRITICAL - 2022-03-28 10:03:10 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\Index_admin.php(15): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\index_admin->Index_admin()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\index_admin))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
+ERROR - 2022-03-28 10:04:02 --> Table 'tc_arena.type' doesn't exist
+CRITICAL - 2022-03-28 10:04:02 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\Bookingpage.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Bookingpage->bookingpage()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bookingpage))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
+ERROR - 2022-03-28 10:04:07 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-28 10:04:07 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
+ERROR - 2022-03-28 10:04:11 --> Table 'tc_arena.type' doesn't exist
+CRITICAL - 2022-03-28 10:04:11 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\Bookingpage.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Bookingpage->bookingpage()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bookingpage))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
+ERROR - 2022-03-28 10:04:15 --> Table 'tc_arena.type' doesn't exist
+CRITICAL - 2022-03-28 10:04:15 --> Call to a member function getResult() on bool
+#0 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\app\Controllers\Bookingpage.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Bookingpage->bookingpage()
+#3 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bookingpage))
+#4 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\mrabh\Downloads\9.56-28-3\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\mrabh\\...')
+#7 {main}
