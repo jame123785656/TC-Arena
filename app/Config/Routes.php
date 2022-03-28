@@ -49,7 +49,6 @@ $routes->get('/edit_admin/(:num)', 'Index_admin::edit_admin/$1');
 $routes->get('/userhistory', 'Userhistory::userhistory');
 $routes->get('/pay_admin', 'Pay_admin::pay_admin');
 $routes->get('/report_admin', 'Report_admin::report_admin');
-$routes->get('/bookingpage_admin', 'Bookingpage_admin::bookingpage_admin');
 $routes->get('/promotion_admin', 'Promotion_admin::promotion_admin');
 
 

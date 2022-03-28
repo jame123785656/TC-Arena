@@ -20,7 +20,7 @@ class User_review extends Controller
         $file = $this->request->getFile('r_image');
         if($_FILES['r_image']['name'] !=""){
             $r_image = $file->getRandomName();
-            $file->move('../public/adminimage_stadium', $r_image);
+            $file->move('../public/img', $r_image);
             }else{
                 $r_image = "";
             }
