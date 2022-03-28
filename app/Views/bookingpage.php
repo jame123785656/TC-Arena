@@ -58,7 +58,7 @@
                 <input type="hidden" name="F_ID" id="F_ID02" value="">
                     
                 <input type="hidden" name="ID"  disabled class="form-control" id="inputforID"  value="<?php echo  $session->get('ID'); ?>">
-                <input type="date" name="B_day" value="<?= set_value('B_day'); ?>" min="<?php echo date('Y-m-d');?>">
+                <input type="date" name="B_day" required value="<?= set_value('B_day'); ?>" min="<?php echo date('Y-m-d');?>">
                 <p>เวลาที่ต้องการจอง</p>
                <div class="w3-dropdown-hover">
                     <input type="text" placeholder="00.00 - 00.00 น.">
@@ -68,7 +68,7 @@
                           <?php if ($time) : ?>
                         <?php foreach ($time as $time) : ?>
                             <div>                         
-                                <input  type="checkbox"  id="time" name="<?php echo 'time'.$time['T_id'] ?>" value="<?php echo $time['T_id'] ?>">
+                                <input  type="checkbox"   id="time" name="<?php echo 'time'.$time['T_id'] ?>"  value="<?php echo $time['T_id'] ?>">
                                 <label for="time"><?php echo $time['T_start']; ?>-<?php echo $time['T_end']; ?></label>
                                 </div>
                                  <?php endforeach; ?>
