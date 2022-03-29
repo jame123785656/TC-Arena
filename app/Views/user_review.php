@@ -42,13 +42,13 @@
             echo "<img  src='/img/".$review['r_image']."'>";
             }
       ?>     
-
-     
             <p><?php echo $review['r_name']; ?></p>
+            
         </div>
     </div>
     <?php endforeach; ?>
         <?php endif; ?>
+        <br>
     
      <!-- Popup -->
      <div class="form-popup" id="myForm">

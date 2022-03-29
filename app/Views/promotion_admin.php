@@ -29,35 +29,30 @@
     <div class="table-style">
       <table style="width:100%">
         <tr>
-          <td>ลำดับ</td>
+          
           <td>รายละเอียดโปรโมชั่น</td>
           <td><img src="https://cdn.discordapp.com/attachments/934731258976677898/957855022903857152/plus_1.png" width="30px" height="30px" onclick="AddPromotion()"></td>
 
         </tr>
+        <?php if ($promotion) : ?>
+    <?php foreach ($promotion as $promotion) : ?>
         <tr>
-          <td>001</td>
-          <td>ฟรีน้ำเปล่าขนาด 500 ml. 1 แพ็ค</td>
+          <td><?php echo $promotion['p_name']?></td>
           <td>
-            <img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png" width="25px" height="25px">
+          <a href="<?php echo base_url('/Index_admin/p_delete/'.$promotion['p_id'])?>"> <img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png"  width="25px" height="25px"></a>
           </td>
         </tr>
-        <tr>
-          <td>002</td>
-          <td>ฟรีน้ำเปล่าขนาด 500ml. กับ ผ้าเย็น 10 ผืน</td>
-            <td><img src="https://cdn.discordapp.com/attachments/934731258976677898/946017908411236382/bin.png" width="25px" height="25px"></td>
-          </td>
-        </tr>
-        <tr>
+        <?php endforeach; ?>
+<?php endif; ?>
       </table>
 
 
     </div>
     <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
+      <form action="/Index_admin/p_insert" class="form-container">
         <h3>เพิ่มข้อมูลโปรโมชั่น</h3>
         <div class="form-promotion">
-
-          <input type="text" placeholder="กรุณากรอกโปรโมชั่น" value="">
+          <input type="text" name="p_name" placeholder="กรุณากรอกโปรโมชั่น"  value="<?= set_value('p_name'); ?>">
           <div class="form-btn">
             <button class="btnCf" type="submit">ยืนยัน</button>
             <button onclick="closeForm()" class="btnCancel" type="button">ยกเลิก</button>

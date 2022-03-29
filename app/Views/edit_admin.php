@@ -33,8 +33,8 @@
                 <p for="inputName">เพิ่มชื่อสนาม</p>
                 <input type="text" name="Name" id="inputforName" value="<?php echo $field['Name']; ?>" >
                 <p for="inputType">เพิ่มขนาดสนาม</p>
-             <select name="Type" id="Type" class="type">
-             <?php if ($type) : ?>
+                <select name="Type" id="Type" class="type">
+                     <?php if ($type) : ?>
                       <?php foreach ($type as $type) : ?>
                   <option value="<?php echo $type['T_id'] ?>" <?php if($field['Type']==$type['T_id']){
                     echo 'selected';
@@ -47,8 +47,17 @@
                 <input type="text" name="person" id="inputforperson" value="<?php echo $field['person']; ?>">
                 <p for="inputPrice">เพิ่มค่าบริการ/ชม.</p>
                 <input type="text"  name="Price" id="inputforPrice" value="<?php echo $field['Price']; ?>">
-                <p for="inputPromotion">เพิ่มโปรโมชั่น</p>
-                <input type="text" name="Promotion" id="inputforPromotion" value="<?php echo $field['p_name']; ?>">         
+                <p>เพิ่มโปรโมชั่น</p>
+                <select name="Promotion" id="Promotion" class="type">
+             <?php if ($promotion) : ?>
+                      <?php foreach ($promotion as $promotion) : ?>
+                  <option value="<?php echo $promotion['p_id'] ?>" <?php if($field['Promotion']==$promotion['p_id']){
+                    echo 'selected';
+                  } ?>><?php echo $promotion['p_name']; ?></option>
+               
+                  <?php endforeach; ?>
+                    <?php endif; ?>
+                </select>      
             </div>
             <div class="form-btn-edit">
                 <button class="btnCf" type="submit" >ยืนยัน</button>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/employee.css'); ?>" >
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_admin.css'); ?>" >
-  <title>Employee</title>
+  <title>จัดการสนาม</title>
 </head>
 
 
@@ -76,8 +76,15 @@
                 <input type="text" name="Price" placeholder="กรุณาใส่ค่าบริการ/ชม." required value="<?= set_value('Price'); ?>">
                 <p>เพิ่มโปรโมชั่น</p>
                 <select name="Promotion" id="Promotion" class="type">
-                 <option value="1">	ฟรีน้ำเปล่าขนาด 500 ml. 1 แพ็ค</option>
-                </select> 
+             <?php if ($promotion) : ?>
+                      <?php foreach ($promotion as $promotion) : ?>
+                  <option value="<?php echo $promotion['p_id'] ?>" <?php if($field['Promotion']==$promotion['p_id']){
+                    echo 'selected';
+                  } ?>><?php echo $promotion['p_name']; ?></option>
+               
+                  <?php endforeach; ?>
+                    <?php endif; ?>
+                </select>
             </div>
             <div class="form-btn">
                 <button class="btnCf" type="submit">ยืนยัน</button>

@@ -12,7 +12,7 @@
 
 <body>
     <?php $ID = $session->get('ID'); ?>
-    <form action="<?= base_url('/Editprofile/editprofile/' . $ID) ?>" method="post" enctype="multipart/form-data">
+    <form action="<?= base_url('/User/editprofile/' . $ID) ?>" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo  $user['ID']; ?>">
         <div class="areaBackground">
             <div class="areaBox">
