@@ -284,6 +284,14 @@ body{
   margin-left: 5%;
   margin-bottom: 10%;
 }
+.type{
+  margin-left: 15%;
+  width: 68%;
+  height: 30px;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
 
 .card{
   width: 80%;

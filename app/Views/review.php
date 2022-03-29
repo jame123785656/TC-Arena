@@ -29,7 +29,7 @@
             <?php if(!$review['r_image']){
                echo '';
             }else{      
-            echo "<img src='/adminimage_stadium/".$review['r_image']."'>";
+            echo "<img src='/img/".$review['r_image']."'>";
             }
       ?>     
             <p><?php echo $review['r_name']; ?></p>

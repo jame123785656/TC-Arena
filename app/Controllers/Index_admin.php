@@ -6,15 +6,19 @@ use CodeIgniter\Controller;
 
 use App\Models\FieldModel;
 use App\Models\TypeModel;
+use App\Models\PromotionModel;
 
 
 class index_admin extends Controller{   
      public function Index_admin(){
         helper(['form']);
         $FieldModel = new FieldModel();
+        $PromotionModel = new PromotionModel();
+        $data ['promotion'] = $PromotionModel->orderBy('p_id', 'Asc')->findAll();
         $data['field'] = $FieldModel->join('type','field.type = type.T_id')->join('promotion','field.Promotion = promotion.p_id' )->orderBy('F_ID', 'Asc')->findAll();
         echo view('index_admin',$data);
     }
+    // -------------------->จัดการสนาม
     public function insert(){
         $model = new FieldModel();
             $img = $this->request->getFile('file');
@@ -34,8 +38,10 @@ class index_admin extends Controller{
     {
         $FieldModel = new FieldModel();
         $TypeModel = new TypeModel();
+        $PromotionModel = new PromotionModel();
         $data['field'] = $FieldModel->join('type','field.type = type.T_id')->join('Promotion','field.promotion = Promotion.p_id')->where('F_ID',$F_ID)->first();
         $data['type'] = $TypeModel->orderBy('T_id', 'Asc')->findAll();
+        $data ['promotion'] = $PromotionModel->orderBy('p_id', 'Asc')->findAll();
         echo view('edit_admin',$data);
     }
     public function update()
@@ -56,7 +62,7 @@ class index_admin extends Controller{
             'Type' => $this->request->getVar('Type'),
             'person' => $this->request->getVar('person'),
             'Price' => $this->request->getVar('Price'),
-            'p_name' => $this->request->getVar('Promotion'),
+            'Promotion' => $this->request->getVar('Promotion'),
             'f_image' => $f_image,
         ];
         $session->setFlashdata('swel_title', 'แก้ไขข้อมูลสำเร็จ');
@@ -79,4 +85,33 @@ class index_admin extends Controller{
         $session->setFlashdata('swel_button', 'ตกลง');
         return $this->response->redirect(site_url('/index_admin'));
     }
+
+
+    // -------------------------------------จัดการโปรโมชั่น
+    public function promotion_admin() {
+        helper(['form']);
+        $PromotionModel = new PromotionModel();
+        $data ['promotion'] = $PromotionModel->orderBy('p_id', 'Asc')->findAll();
+        echo view('promotion_admin',$data);
+    }
+    public function p_insert(){
+        $model = new PromotionModel();
+        $data = [
+            'p_name' => $this->request->getVar('p_name'),
+        ];
+        $model->insert($data);
+        return redirect()->to('/promotion_admin');
+    }
+    public function p_delete($p_id = null) {
+        $session = session();
+        $PromotionModel = new PromotionModel();
+        $data['Promotion'] = $PromotionModel->where('p_id', $p_id)->delete($p_id);
+      
+        $session->setFlashdata('swel_title', 'ลบข้อมูลสำเร็จ');
+        $session->setFlashdata('swel_icon', 'success');
+        $session->setFlashdata('swel_button', 'ตกลง');
+        return $this->response->redirect(site_url('/index_admin'));
+    }
+
+
 }

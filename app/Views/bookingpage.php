@@ -68,7 +68,7 @@
                           <?php if ($time) : ?>
                         <?php foreach ($time as $time) : ?>
                             <div>                         
-                                <input  type="checkbox" required  id="time" name="<?php echo 'time'.$time['T_id'] ?>"  value="<?php echo $time['T_id'] ?>">
+                                <input  type="checkbox"   id="time" name="<?php echo 'time'.$time['T_id'] ?>"  value="<?php echo $time['T_id'] ?>">
                                 <label for="time"><?php echo $time['T_start']; ?>-<?php echo $time['T_end']; ?></label>
                                 </div>
                                  <?php endforeach; ?>

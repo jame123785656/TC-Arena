@@ -34,12 +34,12 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'index::index');
 $routes->get('/login', 'Login::login');
 $routes->get('/register', 'Register::register');
-$routes->get('/review', 'Review::review');
+$routes->get('/review', 'index::review');
 $routes->get('/user', 'User::user');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/stadium', 'Stadium::stadium');
-$routes->get('/profile', 'Profile::profile');
-$routes->get('/editprofile/(:num)', 'Editprofile::index/$1');
+$routes->get('/profile', 'user::profile');
+$routes->get('/editprofile/(:num)', 'user::edit/$1');
 $routes->get('/user_review', 'User_review::user_review');
 $routes->get('/index_admin', 'Index_admin::index_admin');
 $routes->get('/bookingpage', 'Bookingpage::bookingpage');
@@ -49,8 +49,7 @@ $routes->get('/edit_admin/(:num)', 'Index_admin::edit_admin/$1');
 $routes->get('/userhistory', 'Userhistory::userhistory');
 $routes->get('/pay_admin', 'Pay_admin::pay_admin');
 $routes->get('/report_admin', 'Report_admin::report_admin');
-$routes->get('/bookingpage_admin', 'Bookingpage_admin::bookingpage_admin');
-$routes->get('/promotion_admin', 'Promotion_admin::promotion_admin');
+$routes->get('/promotion_admin', 'Index_admin::promotion_admin');
 
 
 

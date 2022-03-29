@@ -8,7 +8,7 @@
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_Admin.css'); ?>" >
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/employee.css'); ?>" >
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/pay_admin.css'); ?>" >
-    <title>จัดการการจองสนาม</title>
+    <title>จัดการชำระเงิน</title>
 </head>
 <body>
 

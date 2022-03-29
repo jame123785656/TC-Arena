@@ -39,16 +39,16 @@
             <?php if(!$review['r_image']){
                echo '';
             }else{      
-            echo "<img src='/adminimage_stadium/".$review['r_image']."'>";
+            echo "<img  src='/img/".$review['r_image']."'>";
             }
       ?>     
-
-     
             <p><?php echo $review['r_name']; ?></p>
+            
         </div>
     </div>
     <?php endforeach; ?>
         <?php endif; ?>
+        <br>
     
      <!-- Popup -->
      <div class="form-popup" id="myForm">
@@ -58,6 +58,7 @@
             <div class="form-field">
                 <p>เขียนข้อความรีวิว</p>
                 <input type="file" name="r_image" class="form-control">
+                <br><br>
                 <input type="text" name="r_name"  id="inputforr_name" placeholder="กรุณาเขียนข้อความ" value="<?= set_value('r_name'); ?>">
             </div>
             <div class="form-btn">
