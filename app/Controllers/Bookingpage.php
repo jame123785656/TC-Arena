@@ -108,7 +108,8 @@ class Bookingpage extends Controller {
             $model02->insert($data02);
       
         }
-          return redirect()->to('/pay');
+           $ID = $session->get('ID');
+          return redirect()->to('/pay/'.$ID);
     }
     public function select_Field(){
         $session = session();

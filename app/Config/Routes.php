@@ -44,7 +44,7 @@ $routes->get('/user_review', 'User_review::user_review');
 $routes->get('/index_admin', 'Index_admin::index_admin');
 $routes->get('/bookingpage', 'Bookingpage::bookingpage');
 $routes->get('/manageuser', 'Manageuser::manageuser');
-$routes->get('/pay', 'Pay::pay');
+$routes->get('/pay/(:num)', 'Pay::pay/$1');
 $routes->get('/edit_admin/(:num)', 'Index_admin::edit_admin/$1');
 $routes->get('/userhistory', 'Userhistory::userhistory');
 $routes->get('/pay_admin', 'Pay_admin::pay_admin');

@@ -15,16 +15,25 @@
         <div class="from-pay">
             <h4>ชำระเงิน</h4>
             <div class="detailsPay">
+           
                 <div class="detailsLeft">
-                    <img src="/image/imageF1.jpg" alt="">
+                <?php if ($booking) : ?>
+                        <?php foreach ($booking as $booking) : ?>
+                <img src="/adminimage_stadium/<?php echo $booking['f_image'] ?>">
                 </div>
                 <div class="detailsRight">
-                    <h3>สนาม A (ขนาดเล็ก)</h3><hr>
-                    <p>- วันที่ 04/03/2022</p>
-                    <p>- เวลา 09.00-10.00</p>
-                    <p>- เวลา 10.00-11.00</p>
-                    <p>- 2 ชั่วโมง ราคา 800 บาท</p>
+                    <h3><?php echo $booking['Name']; ?></h3><hr>
+                    <p>- วันที่ <?php echo $booking['B_day']; ?></p>
+                    <?php endforeach; ?>
+                            <?php endif; ?>
+
+                            <?php if ($detail) : ?>
+                        <?php foreach ($detail as $detail) : ?>
+                    <p>- เวลา <?php echo $detail['T_start']; ?>-<?php echo $detail['T_end']; ?></p>
+                    <?php endforeach; ?>
+                            <?php endif; ?>
                 </div>
+                
             </div>
         </div>
         <div class="from-payB">
