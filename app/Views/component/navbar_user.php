@@ -19,11 +19,10 @@
                 <a href="/bookingpage"><p>จองสนาม</p></a>
                 <a href="/user_review"><p>รีวิวสนาม</p></a>
                 <a href="/userhistory"><p>ประวัติการจอง</p></a>
-                <a href=""><p>ติดต่อเรา</p></a>
             </div>
             <div class="showuser">
                 <a href="/profile" class="imguser"><img src="/img/<?php echo $session->get('image') ?>" alt=""></a>
-               <p><?php echo  $session->get('username'); ?></p>
+                <p class="textuser"><?php echo  $session->get('username'); ?></p>
                 <a href="/logout"  class="logout"><p>ออกจากระบบ</p></a>
             </div>
         </div>

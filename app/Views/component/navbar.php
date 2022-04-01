@@ -17,7 +17,6 @@
                 <a href="/login"><p>จองสนาม</p></a>
                 <a href="/review"><p>รีวิวสนาม</p></a>
                 <a href=""><p>ประวัติการจอง</p></a>
-                <a href=""><p>ติดต่อเรา</p></a>
             </div>
             <div class="showuser">
                 <a href="/login" class="logout"><p>เข้าสู่ระบบ</p></a>

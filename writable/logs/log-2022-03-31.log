@@ -1,0 +1,176 @@
+ERROR - 2022-03-31 10:52:10 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 10:52:10 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 10:52:14 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 10:52:14 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 10:54:23 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 10:54:23 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 10:54:31 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 10:54:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 10:55:21 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 10:55:21 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 10:56:50 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 10:56:50 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 10:57:25 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 10:57:25 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 21:05:55 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 21:05:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Review.php(14): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Review->review()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Review))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 21:07:51 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 21:07:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Review.php(14): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Review->review()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Review))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 21:08:31 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 21:08:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 21:08:35 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-31 21:08:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\Login->auth()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-31 21:09:07 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 21:09:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 21:09:22 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 21:09:22 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 21:10:43 --> Table 'tc_arena.review' doesn't exist
+CRITICAL - 2022-03-31 21:10:43 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\TC-Arena\TC-Arena\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\TC-Arena\TC-Arena\app\Controllers\User_review.php(14): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(825): App\Controllers\User_review->user_review()
+#3 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User_review))
+#4 C:\xampp\htdocs\TC-Arena\TC-Arena\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\TC-Arena\TC-Arena\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\TC-Arena\TC-Arena\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
