@@ -24,7 +24,6 @@
     <div class="table-style">
     <table style="width:100%">
      <tr>
-        <td>ลำดับ</td>
         <td>ชื่อลูกค้า</td>
         <td>ชื่อ-นามสกุล</td>
         <td>อีเมลล์</td>
@@ -35,7 +34,6 @@
       <?php if ($user) : ?>
     <?php foreach ($user as $user) : ?>
      <tr>
-        <td><?php echo $user['ID']?></td>
         <td><?php echo $user['username']?></td>
         <td><?php echo $user['name']?></td>
         <td><?php echo $user['Email']?></td>

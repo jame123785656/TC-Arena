@@ -20,22 +20,20 @@
         <div class="items-table">
             <table>
             <tr>
-                <th>วัน/เวลาที่ทำรายการ</th>
                 <th>วัน/เวลาที่จอง</th>
                 <th>สนามที่จอง</th>
                 <th>จำนวนชั่วโมง</th>
                 <th>จำนวนเงิน</th>
                 <th>สถานะ</th>
             </tr>
-<?php if ($user_history) : ?>
-    <?php foreach ($user_history as $user_history) : ?>
+<?php if ($booking) : ?>
+    <?php foreach ($booking as $bookings) : ?>
             <tr>
-                <td><?php echo $user_history['H_time']; ?></td>
-                <td><?php echo $user_history['H_Tbook']; ?></td>
-                <td><?php echo $user_history['H_field']; ?></td>
-                <td><?php echo $user_history['H_hour']; ?></td>
-                <td><?php echo $user_history['H_price']; ?></td>
-                <td><?php echo $user_history['H_status']; ?></td>
+                <td><?php echo $bookings['B_day']; ?></td>
+                <td><?php echo $bookings['Name']; ?></td>  
+                <td><?php echo count((array)$detail) ?> ชั่วโมง</td>
+                <td><?= $sumprice[] = $bookings['Price'] * count ((array)$detail) ?> บาท</td>
+                <td><?php echo $bookings['S_name']; ?></td>
             </tr>
         </div>
     <?php endforeach; ?>

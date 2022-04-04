@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/editprofile.css'); ?>" >
     <title>แก้ไขข้อมูลส่วนตัว</title>
 </head>
@@ -34,8 +36,8 @@
                 </div>
 
                 <div class="boxRight">
-                    <img src="/img/<?php echo $session->get('image') ?>" alt="">
-                    <input type="file" name="image"  accept="img/*">
+                <img src="/img/<?php echo $session->get('image') ?>" id="profileDisplay" onclick="triggerClick()" value="" alt="">
+                    <input type="file" name="image" onchange ="displayImage(this)" id="profileimage">
                     <input type="hidden" name="old_image" value="<?php echo  $session->get('image') ?>">
                     <a href="/profile"><button type="button" class="btnback">ย้อนกลับ</button></a>
                 </div>
@@ -45,3 +47,20 @@
     
 </body>
 </html>
+
+<script>
+    function triggerClick(){
+    document.querySelector('#profileimage').click();
+}
+
+function displayImage(e){
+    if(e.files[0]){
+        var reader= new FileReader();
+
+        reader.onload=function(e){
+            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
+        }
+        reader.readAsDataURL(e.files[0]);
+    }
+}
+</script>

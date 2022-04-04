@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/pay.css'); ?>" >
     <link rel= "stylesheet" type= "text/css" href= "<?php echo base_url('./css/navbar_user.css'); ?>" >
     <title>Pay</title>
 </head>
 <body>
 
-    <?php require('component/navbar_user.php') ?>
 
         <div class="from-pay">
             <h4>ชำระเงิน</h4>
@@ -26,14 +27,18 @@
                     <p>- วันที่ <?php echo $booking['B_day']; ?></p>
                     <?php endforeach; ?>
                             <?php endif; ?>
-
+                          
                             <?php if ($detail) : ?>
-                        <?php foreach ($detail as $detail) : ?>
-                    <p>- เวลา <?php echo $detail['T_start']; ?>-<?php echo $detail['T_end']; ?></p>
+                        <?php foreach ($detail as $details) : ?>
+                    <p>- เวลา <?php echo $details['T_start']; ?>-<?php echo $details['T_end']; ?></p>
                     <?php endforeach; ?>
                             <?php endif; ?>
+                    <p>   <?php echo count((array)$detail) ?> ชั่วโมง</p>       
+                    <p>ราคารวม <?= $sumprice[] = $booking['Price'] * count ((array)$detail) ?> บาท </p> 
+                            
+                 
                 </div>
-                
+              
             </div>
         </div>
         <div class="from-payB">
@@ -69,23 +74,43 @@
                     </div>
                 </div>
             </div>
+           
             <div class="fromRight">
                 <div class="icon-img">
                     <img src="/image/add-image.png" alt="">
                     <p>แนบสลิป</p>
                 </div>
+                <form action="<?= base_url('/Pay/p_update') ?>" method="post" enctype="multipart/form-data" class="form-container-edit">
+                <input type="hidden" name="B_id" value="<?php echo  $booking['B_id']; ?>">
                 <div class="img-check">
-                    <img src="/image/img.png" alt="">
+                    <img src="/image/img.png"id="profileDisplay" onclick="triggerClick()" value="" alt="" >
+                    <input type="file" name="B_img" onchange ="displayImage(this)" id="profileimage" >
                 </div>
                 <div class="btnO">
-                    <button class="btncf" type="button">ยืนยัน</button>
-                    <button class="btncan" type="button">ยกเลิก</button>
+                    <button class="btncf" type="submit">ยืนยัน</button>
+                    <a href="<?php echo base_url('/Pay/pay_delete/'.$booking['B_id'])?>"> <button class="btncan" type="button">ยกเลิก</button></a>
                 </div>
             </div>
         </div>
 
-
-        <?php require('component/footer.php') ?>
+        </form>
 
 </body>
 </html>
+
+<script>
+    function triggerClick(){
+    document.querySelector('#profileimage').click();
+}
+
+function displayImage(e){
+    if(e.files[0]){
+        var reader= new FileReader();
+
+        reader.onload=function(e){
+            document.querySelector('#profileDisplay').setAttribute('src',e.target.result);
+        }
+        reader.readAsDataURL(e.files[0]);
+    }
+}
+</script>

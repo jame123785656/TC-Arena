@@ -23,7 +23,7 @@ class Bookingpage extends Controller {
             'B_day' => $this->request->getVar('B_day'),
             'B_idUser'=>$session->get('ID'),
             'B_idFeld' => $this->request->getVar('F_ID'),
-            'B_img' => "-",
+            'B_img' => "",
             'B_status' => "1"
         ];
         $model->insert($data);

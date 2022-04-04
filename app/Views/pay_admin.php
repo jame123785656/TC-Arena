@@ -15,79 +15,41 @@
 <?php require('component/navbar_admin.php') ?>
 
     <h4>จัดการชำระเงิน</h4>
-        <div class="row">
-            <div class="from-pay">
-                <div class="detailsPay">
+ 
+            <div class="row">
+               <div class="from-pay">
+                     <?php if ($booking) : ?>
+                        <?php foreach ($booking as $booking) : ?>
+                 <div class="detailsPay">
                     <div class="detailsLeft">
-                        <img src="/image/img.png" alt="">
+                    <input type="hidden" name="B_id" value="<?php echo  $booking['B_id']; ?>"> 
+                        <img src="/img_ slip/<?php echo $booking['B_img'] ?>">
                     </div>
                     <div class="detailsRight">
-                        <h3>สนาม A (ขนาดเล็ก)</h3><hr>
-                        <p>- วันที่ 04/03/2022</p>
-                        <p>- เวลา 09.00-10.00</p>
-                        <p>- เวลา 10.00-11.00</p>
-                        <p>- 2 ชั่วโมง ราคา 800 บาท</p>
-                        <button class="btnCf-pay" type="submit" >ยืนยัน</button>
+                        <h3><?php echo $booking['Name']; ?></h3><hr>
+                        <p>ชื่อ <?php echo $booking['name']; ?></p>
+                        <p>-วันที่ <?php echo $booking['B_day']; ?></p>
+                        <?php  
+                        $count = 0;
+                        if ($detail) : ?>
+                        <?php foreach ($detail as $details) : ?>
+
+                            <?php if($details['d_id'] == $booking['B_id']){
+                                $count += 1;
+                        echo  $details['T_start']; ?>-<?php echo $details['T_end'].'<br/>' ;
+                            }?>
+                        <?php endforeach; ?>
+                            <?php endif; ?>
+                      
+                        <p>- <?php echo $count ?> ชั่วโมง ราคา <?= $sumprice[] = $booking['Price'] * $count?> บาท</p>
+                        <a href="<?php echo base_url('/pay_admin/update_pay') ?>"><button class="btnCf-pay" type="button" >ยืนยัน</button></a>
                         <a href="/index_admin"><button class="btnCancel-pay" type="button">ยกเลิก</button></a>
                     </div>
                 </div>
+                <?php endforeach; ?>
+                            <?php endif; ?>
             </div>
 
-            <div class="from-pay">
-                <div class="detailsPay">
-                        <div class="detailsLeft">
-                            <img src="/image/img.png" alt="">
-                        </div>
-                        <div class="detailsRight">
-                            <h3>สนาม B (ขนาดเล็ก)</h3><hr>
-                            <p>- วันที่ 05/03/2022</p>
-                            <p>- เวลา 11.00-12.00</p>
-                            <p>- เวลา 12.00-13.00</p>
-                            <p>- 2 ชั่วโมง ราคา 800 บาท</p>
-                            <button class="btnCf-pay" type="submit" >ยืนยัน</button>
-                        <a href="/index_admin"><button class="btnCancel-pay" type="button">ยกเลิก</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="from-pay">
-                <div class="detailsPay">
-                    <div class="detailsLeft">
-                        <img src="/image/img.png" alt="">
-                    </div>
-                    <div class="detailsRight">
-                        <h3>สนาม A (ขนาดเล็ก)</h3><hr>
-                        <p>- วันที่ 06/03/2022</p>
-                        <p>- เวลา 09.00-10.00</p>
-                        <p>- เวลา 10.00-11.00</p>
-                        <p>- 2 ชั่วโมง ราคา 800 บาท</p>
-                        <button class="btnCf-pay" type="submit" >ยืนยัน</button>
-                        <a href="/index_admin"><button class="btnCancel-pay" type="button">ยกเลิก</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="from-pay">
-                <div class="detailsPay">
-                        <div class="detailsLeft">
-                            <img src="/image/img.png" alt="">
-                        </div>
-                        <div class="detailsRight">
-                            <h3>สนาม B (ขนาดเล็ก)</h3><hr>
-                            <p>- วันที่ 07/03/2022</p>
-                            <p>- เวลา 13.00-14.00</p>
-                            <p>- เวลา 14.00-15.00</p>
-                            <p>- 2 ชั่วโมง ราคา 800 บาท</p>
-                            <button class="btnCf-pay" type="submit" >ยืนยัน</button>
-                        <a href="/index_admin"><button class="btnCancel-pay" type="button">ยกเลิก</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     
        

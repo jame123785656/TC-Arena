@@ -17,9 +17,9 @@
             <div class="menu-section">
                 <a href="/user"><p>หน้าหลัก</p></a>
                 <a href="/bookingpage"><p>จองสนาม</p></a>
-                <a href="/user_review"><p>รีวิวสนาม</p></a>
-                <a href="/userhistory"><p>ประวัติการจอง</p></a>
-                <a href=""><p>ติดต่อเรา</p></a>
+                <a href="/user_review"><p>รีวิวสนาม</p>
+                <?php $ID = $session->get('ID'); ?>
+                <a href="<?php echo base_url('/userhistory/'.$ID) ?>"><p>ประวัติการจอง</p></a>
             </div>
             <div class="showuser">
                 <a href="/profile" class="imguser"><img src="/img/<?php echo $session->get('image') ?>" alt=""></a>
